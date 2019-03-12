@@ -5,7 +5,7 @@ import { $ } from 'protractor';
   selector: 'app-motor',
   templateUrl: './motor.component.html',
   styleUrls: ['./motor.component.css'],
-  // template : '<section class="cabin" ><div class="counter" id="counter">{{segundos}}</div></section>  <div class="divmotor"><section class="motor"><button (click)="togglePause()" class="round-button">{{buttonLabel}}</button></section></div>'
+  template : '<section class="cabin" ><div class="counter" id="counter">{{segundos}}</div></section>  <div class="divmotor"><section class="motor"><button (click)="togglePause()" class="round-button">{{buttonLabel}}</button></section></div>'
 })
 export class MotorComponent implements OnInit {
 
