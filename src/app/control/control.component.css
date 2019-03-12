@@ -1,0 +1,21 @@
+body{
+    background: url(/assets/spaceship.svg) no-repeat center;
+}
+.cabin {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter {
+    font-size: 50rem;
+    vertical-align: middle;
+    color: #ff4747;
+    font-size: 100px;
+}
+* {
+    font-family: sans-serif;
+    
+}
