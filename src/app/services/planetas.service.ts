@@ -12,15 +12,11 @@ export class PlanetasService {
 
   getAllPlanetas(){
   //  const url_api = "http://localhost:3000";
-  const url_api = "/planetas";
-
-   return this.http.get(url_api);   
+  // const url_api = "/planetas";
+   return this.http.get('planetas'); 
   }
 
-  // getOnePlaneta(){
-  //   //  const url_api = "http://localhost:3000";
-  //   const url_api = "/planetas/";
-  
-  //    return this.http.get(url_api);   
-  //   }
+  getOnePlaneta(){
+  return this.getAllPlanetas();
+  }
 }

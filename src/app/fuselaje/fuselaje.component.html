@@ -1,16 +1,31 @@
 <div class="fuselaje">
-    <section class="status">
+  <!-- <input type="text" class="form-control" name="filterPost" [(ngModel)]="filterPost"> -->
+  <div class="col-md-2 buscar">
+  <input class="form-control mr-sm-2" type="search" id="buscar" placeholder="Buscar planeta" aria-label="Search" name="filterPost" [(ngModel)]="filterPost">
+  </div>
+  <section class="status">
+    <div *ngFor='let planetas of valplanetas | filter:filterPost'>
+        <h3>¡Planeta {{planetas.planeta}} avistado a {{planetas.degrees}}0000 grados!</h3>
+        <div class="tres" style=" width: 100%; height: 100%; z-index: -100; ">
+          <img src="{{planetas.img}}" alt="">
+      </div>
+      </div>
+    
+</section>
+<!-- <section class="rocket"> -->
+  <!-- <section class="status">
             <div class="card border-danger mb-3 panelControl" style="max-width: 18rem;">
                     <div class="card-header bg-transparent border-danger"><h4 class="text-danger">Panel de control</h4></div>
                     <div class="card-header bg-transparent border-danger"><h5 class="text-danger">Planetas</h5></div>
                     <div class="card-body text-secundary">
-                    <div class="card-header bg-transparent border-danger"  *ngFor='let planetas of valplanetas'>
+                    <div class="card-header bg-transparent border-danger"  *ngFor='let planetas of valplanetas | filter:filterPost'>
                       <h5 class="card-title">¡Planeta {{planetas.planeta}} avistado a {{planetas.degrees}}0000 grados!</h5>
+                      <p>{{planetas | json}}</p>
                     </div>
-                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                    </div>
-                  </div>
-    </section>
+                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <!-- </div> -->
+                  <!-- </div> -->
+    <!-- </section>  -->
 </div>
     <section class="rocket">
       <!-- <img src="/assets/spaceship.svg" alt="10px;"> -->

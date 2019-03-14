@@ -12,21 +12,27 @@ import { PlanetasInterface } from '../models/planeta.interface';
 export class FuselajeComponent implements OnInit {
 
   constructor(private dataApi: PlanetasService) { }
+
+  filterPost = '';
   valplanetas: PlanetasInterface ={
   id:'',
   degrees:'',
-  planeta:''
+  planeta:'',
+  img:''
   };
   ngOnInit()  {
     this.getListPlanetas();
   }
 
   getListPlanetas(){
-    this.dataApi.getAllPlanetas().subscribe(planetas =>console.log(planetas));
-    
     this.dataApi.getAllPlanetas().subscribe(planetas => this.valplanetas = planetas);
+  
   }
-
+  
+  getOnePlaneta(){
+    let planetas = this.dataApi.getAllPlanetas();
+    // let planeta = PlanetasInterface.filterPost();
+  }
 
 
 }

@@ -13,6 +13,8 @@ import { FuselajeComponent } from './fuselaje/fuselaje.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import {PlanetasService } from 'src/app/services/planetas.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import {FormsModule} from '@angular/forms';
 
 
 const routes: Routes = [
@@ -29,13 +31,15 @@ const routes: Routes = [
     HeaderComponent,
     MotorComponent,
     CabinaComponent,
-    FuselajeComponent
+    FuselajeComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
      RouterModule.forRoot(routes),
-     HttpClientModule
+     HttpClientModule,
+     FormsModule
   ],
   providers: [PlanetasService],
   bootstrap: [AppComponent]
